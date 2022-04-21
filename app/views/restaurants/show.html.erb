@@ -1,5 +1,21 @@
 <%# afficher détails resto @restaurant %>
 <%# nom, adresse, etc %>
+<h1><%= @restaurant.name %></h1>
+<h2><%= @restaurant.address %></h2>
+<h3><%= @restaurant.category %></h3>
+
 <%# + reviews %>
+<%# <%= link_to "Reviews", new_review_path(@restaurant) %> %>
 
 <%# formulaire review %>
+<%= form_for(@restaurant, @review) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :phone_number %>
+  <%= f.number_field :phone_number %>
+  <%= f.label :category %>
+  <%= f.number_field :category %>
+  <%= f.submit %>
+<% end %>

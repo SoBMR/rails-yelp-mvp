@@ -1,13 +1,13 @@
 <h1>MY YELP</h1>
 
 <div class="container">
-  <div class="col-sm-8 col-sm-offset-2">
+  <%# <div class="col-sm-8 col-sm-offset-2"> %>
 
   <% @restaurants.each do |restaurant| %>
 
   <h2> <%= link_to restaurant.name, restaurant_path(restaurant) %></h2>
 
-  <p> <%= restaurant.category %></p>
+  <%# <p> <%= restaurant.category %></p> %>
   <% end %>
 
   <%= link_to "Add a restaurant", new_restaurant_path %>
